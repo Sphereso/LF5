@@ -6,8 +6,8 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD=lf5
-    volumes:
-      - postgres:/var/lib/postgresql/data
+    #volumes:
+    #  - postgres:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4:latest
     volumes:
@@ -28,7 +28,7 @@ services:
         "-path",
         "/migrations",
         "-database",
-        "postgres://postgres:lf5@db:5432/lf5?sslmode=disable",
+        "postgres://postgres:lf5@db:5432?sslmode=disable",
       ]
     depends_on:
       db:
@@ -36,5 +36,3 @@ services:
     command: ["up"]
     restart: on-failure
 
-volumes:
-  postgres:
