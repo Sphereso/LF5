@@ -4,3 +4,12 @@ services:
     image: postgres:latest
     ports:
       - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=lf5
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 80:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=bitteschreibmichniewiederan@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=lf5
