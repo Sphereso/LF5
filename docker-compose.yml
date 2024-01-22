@@ -6,10 +6,34 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD=lf5
+    volumes:
+      - postgres:/var/lib/postgresql/data
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:latest
     ports:
       - 80:80
     environment:
-      - PGADMIN_DEFAULT_EMAIL=bitteschreibmichniewiederan@gmail.com
+      - PGADMIN_DEFAULT_EMAIL=mika.bomm@outlook.com
       - PGADMIN_DEFAULT_PASSWORD=lf5
+  migrate:
+    image: migrate/migrate:latest
+    profiles: ["tools"]
+    volumes:
+      - ./db/migrations:/migrations
+    entrypoint:
+      [
+        "migrate",
+        "-path",
+        "/migrations",
+        "-database",
+        "postgres://postgres:lf5@db:5432/lf5?sslmode=disable",
+      ]
+    depends_on:
+      db:
+        condition: service_started
+    command: ["up"]
+    restart: on-failure
+
+
+volumes:
+  postgres:
