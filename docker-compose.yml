@@ -10,14 +10,16 @@ services:
       - postgres:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4:latest
+    volumes:
+    - ./pgadmin4/:/pgconfig/
     ports:
       - 80:80
     environment:
       - PGADMIN_DEFAULT_EMAIL=mika.bomm@outlook.com
       - PGADMIN_DEFAULT_PASSWORD=lf5
+      - PGADMIN_SERVER_JSON_FILE=/pgconfig/servers.json
   migrate:
     image: migrate/migrate:latest
-    profiles: ["tools"]
     volumes:
       - ./db/migrations:/migrations
     entrypoint:
