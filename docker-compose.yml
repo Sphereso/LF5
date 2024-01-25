@@ -19,6 +19,7 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=lf5
       - PGADMIN_SERVER_JSON_FILE=/pgconfig/servers.json
   migrate:
+    # profiles: ["tools"]
     image: migrate/migrate:latest
     volumes:
       - ./db/migrations:/migrations
