@@ -22,6 +22,7 @@ CREATE TABLE Kunde (
 CREATE TABLE Bestellung (
     id SERIAL NOT NULL,
     kundeId INTEGER NOT NULL,
+    bestellungDatum DATE NOT NULL,
 
     CONSTRAINT Bestellung_pkey PRIMARY KEY (id)
 );
