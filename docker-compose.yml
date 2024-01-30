@@ -15,7 +15,7 @@ services:
     ports:
       - 80:80
     environment:
-      - PGADMIN_DEFAULT_EMAIL=mika.bomm@outlook.com
+      - PGADMIN_DEFAULT_EMAIL=lf5@lf5.de
       - PGADMIN_DEFAULT_PASSWORD=lf5
       - PGADMIN_SERVER_JSON_FILE=/pgconfig/servers.json
   migrate:
