@@ -37,48 +37,48 @@ INSERT INTO Adresse (ID, STRASSE, STADT, PLZ) VALUES (1502, 'Molkereiwegkundekun
 INSERT INTO Lieferant (ID, ADRESSEID, NAME, MAIL) VALUES (1502, 1502, 'Molkerei Henning', 'info@molkerei-henning.de')
 
 --BESTELLUNGEN
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5002, 1001, 50);
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1002, 1002,'2020-07-08');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1002, 1002,'2020-07-08');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1002, 1);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1003, 1003,'2020-08-01');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1003, 1003,'2020-08-01');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5003, 1003, 3);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1004, 1004,'2020-08-02');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1004, 1004,'2020-08-02');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5002, 1004, 5);
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1005, 1005,'2020-08-02');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1005, 1005,'2020-08-02');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1005, 2);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1006, 1006,'2020-08-10');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1006, 1006,'2020-08-10');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5003, 1006, 20);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1007, 1007,'2020-08-10');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1007, 1007,'2020-08-10');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5002, 1007, 100);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1008, 1008,'2020-08-10');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1008, 1008,'2020-08-10');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1008, 1);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1009, 1009,'2020-08-10');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1009, 1009,'2020-08-10');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5003, 1009, 2);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1010, 1007,'2020-08-15');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1010, 1007,'2020-08-15');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5002, 1010, 1);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1011, 1005,'2020-08-12');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1011, 1005,'2020-08-12');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5002, 1011, 3);
 
 
-INSERT INTO Bestellung (ID, kundenId, bestellungDatum) VALUES (1012, 1003,'2020-08-13');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1012, 1003,'2020-08-13');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1012, 5);
 
