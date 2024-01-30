@@ -27,7 +27,7 @@ INSERT INTO Adresse (id, strasse, stadt, plz) VALUES (1009, 'Elbchaussee 228', '
 INSERT INTO Kunde (id, adresseId, name, vorname, mail) VALUES (1009, 1009, 'Urocki', 'Eric', 'urocki@outlook.de');
 
 --LIEFERANT
-INSERT INTO Adreyse (ID, STRASSE, STADT, PLZ) VALUES (1500, 'Dorfstraße 74', 'Weseby', '24354');
+INSERT INTO Adresse (ID, STRASSE, STADT, PLZ) VALUES (1500, 'Dorfstraße 74', 'Weseby', '24354');
 INSERT INTO Lieferant (ID, ADRESSEID, NAME, MAIL) VALUES (1500, 1500, 'Bio-Hof Müller', 'mueller@biohof.de');
 
 INSERT INTO Adresse (ID, STRASSE, STADT, PLZ) VALUES (1501, 'Westerjork 74', 'Jork', '21635');
