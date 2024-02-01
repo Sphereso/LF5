@@ -75,7 +75,6 @@ CREATE TABLE ZutatenInRezept (
     zutatId INTEGER NOT NULL,
     rezeptId INTEGER NOT NULL,
     menge INTEGER NOT NULL,
-    einheit VARCHAR(10) NOT NULL,
 
     CONSTRAINT ZutatenInRezept_pkey PRIMARY KEY (zutatId,rezeptId)
 );
@@ -89,27 +88,24 @@ CREATE TABLE Lieferant (
     CONSTRAINT Lieferant_pkey PRIMARY KEY (id)
 );
 
-CREATE TABLE _ErnaehrungskategorieToRezept (
-    A INTEGER NOT NULL,
-    B INTEGER NOT NULL
+CREATE TABLE ErnaehrungskategorieToRezept (
+    ernaehrungskategorieId INTEGER NOT NULL,
+    rezeptId INTEGER NOT NULL,
+
+    CONSTRAINT ErnaehrungskategorieToRezept_pkey PRIMARY KEY (ernaehrungskategorieId,rezeptId)
 );
 
-CREATE TABLE _AllergeneToRezept (
-    A INTEGER NOT NULL,
-    B INTEGER NOT NULL
+CREATE TABLE AllergeneToRezept (
+    allergeneId INTEGER NOT NULL,
+    rezeptId INTEGER NOT NULL,
+
+    CONSTRAINT AllergeneToRezept_pkey PRIMARY KEY (allergeneId,rezeptId)
+
 );
 
 CREATE UNIQUE INDEX Kunde_adresseId_key ON Kunde(adresseId);
 
 CREATE UNIQUE INDEX Lieferant_adresseId_key ON Lieferant(adresseId);
-
-CREATE UNIQUE INDEX _ErnaehrungskategorieToRezept_AB_unique ON _ErnaehrungskategorieToRezept(A, B);
-
-CREATE INDEX _ErnaehrungskategorieToRezept_B_index ON _ErnaehrungskategorieToRezept(B);
-
-CREATE UNIQUE INDEX _AllergeneToRezept_AB_unique ON _AllergeneToRezept(A, B);
-
-CREATE INDEX _AllergeneToRezept_B_index ON _AllergeneToRezept(B);
 
 ALTER TABLE Kunde ADD CONSTRAINT Kunde_adresseId_fkey FOREIGN KEY (adresseId) REFERENCES Adresse(id) ON DELETE RESTRICT ON UPDATE CASCADE;
 
@@ -127,10 +123,10 @@ ALTER TABLE ZutatenInRezept ADD CONSTRAINT ZutatenInRezept_rezeptId_fkey FOREIGN
 
 ALTER TABLE Lieferant ADD CONSTRAINT Lieferant_adresseId_fkey FOREIGN KEY (adresseId) REFERENCES Adresse(id) ON DELETE RESTRICT ON UPDATE CASCADE;
 
-ALTER TABLE _ErnaehrungskategorieToRezept ADD CONSTRAINT _ErnaehrungskategorieToRezept_A_fkey FOREIGN KEY (A) REFERENCES Ernaehrungskategorie(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE ErnaehrungskategorieToRezept ADD CONSTRAINT _ErnaehrungskategorieToRezept_A_fkey FOREIGN KEY (ernaehrungskategorieId) REFERENCES Ernaehrungskategorie(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE _ErnaehrungskategorieToRezept ADD CONSTRAINT _ErnaehrungskategorieToRezept_B_fkey FOREIGN KEY (B) REFERENCES Rezept(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE ErnaehrungskategorieToRezept ADD CONSTRAINT _ErnaehrungskategorieToRezept_B_fkey FOREIGN KEY (rezeptId) REFERENCES Rezept(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE _AllergeneToRezept ADD CONSTRAINT _AllergeneToRezept_A_fkey FOREIGN KEY (A) REFERENCES Allergene(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE AllergeneToRezept ADD CONSTRAINT _AllergeneToRezept_A_fkey FOREIGN KEY (allergeneId) REFERENCES Allergene(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE _AllergeneToRezept ADD CONSTRAINT _AllergeneToRezept_B_fkey FOREIGN KEY (B) REFERENCES Rezept(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE AllergeneToRezept ADD CONSTRAINT _AllergeneToRezept_B_fkey FOREIGN KEY (rezeptId) REFERENCES Rezept(id) ON DELETE CASCADE ON UPDATE CASCADE;

@@ -42,37 +42,58 @@ INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5002, 'Thaicurry mit H
 INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5003, 'Kartoffelsuppe', 'Kartoffeln und Karotte schälen und in grobe Würfel schneiden.\nZwiebel würfeln. Lauch in Ringe schneiden.\nZwiebeln in etwas Olivenöl glasig dünsten, Lauch dazugeben. Mit der Gemüsebrühe ablöschen.\nDie gewürfelten Kartoffeln und Karotte in die Brühe geben. Alles für ca. 20 min köcheln lassen.\nAnschließend alles mit dem Pürierstab zu einer Suppe pürieren, mit Pfeffer und Muskat abschmecken.\nDie in Scheiben geschnittenen Würstchen in den Suppenteller geben und die heiße Kartoffelsuppe darüber gießen.');
 
 --ZUTAT
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Kartoffel', 0, 'Stück', 4, 0, 180, 40,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Karotte', 0, 'Stück', 0.5, 0, 25, 6,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Lauch', 0, 'Stück', 1.5, 0, 40, 8,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Zwiebel', 0, 'Stück', 1, 0, 40, 10,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Gemüsebrühe (1000 ml)', 0, 'Stück', 1, 0, 20, 4,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Wiener Würstchen', 0, 'Stück', 10, 35, 200, 2,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Hänchenbrustfilet (500g)', 0, 'Stück', 130, 0, 180, 40,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Reis (250g)', 0, 'Stück', 15, 1, 875, 185,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Sojasauce (2 EL)', 0, 'Stück', 2, 0, 20, 4,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Zucker (1 EL)', 0, 'Stück', 0, 0, 45, 12,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Knoblauch', 0, 'Stück', 0, 0, 5, 1,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Gemischte Gemüse (800g)', 0, 'Stück', 8, 1, 240, 48,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Bambussprossen (200g)', 0, 'Stück', 2, 0, 40, 8,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Kokosmilch (125ml)', 0, 'Stück', 3, 33, 330, 4,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Currypasta, grüne (1 EL)', 0, 'Stück', 0, 1, 20, 2,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Lasagneplatten (300g)', 0, 'Stück', 30, 3, 900, 180,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Spinat (800g)', 0, 'Stück', 20, 20, 160, 20,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Lachs (500g)', 0, 'Stück', 100, 70, 1100, 0,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Käse (150g, gerieben)', 0, 'Stück', 40, 48, 600, 0,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Butter', 0, 'Stück', 0, 49, 360, 0,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Mehl (2 EL)', 0, 'Stück', 2, 0, 60, 12,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Brühe (125ml)', 0, 'Stück', 0, 0, 5, 1,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Sahne (200)', 0, 'Stück', 4, 68, 650, 6,)
-INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Parmesan (75g, gerieben)', 0, 'Stück', 24, 20, 300, 0,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2000, 1500, 'Kartoffel', 0, 'Stück', 4, 0, 180, 40);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2000, 5003, 5);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2001, 1502, 'Karotte', 0, 'Stück', 0.5, 0, 25, 6);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2001, 5003, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2002, 1500, 'Lauch', 0, 'Stück', 1.5, 0, 40, 8);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2002, 5003, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2003, 1500, 'Zwiebel', 0, 'Stück', 1, 0, 40, 10);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2003, 5003, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2004, 1502, 'Gemüsebrühe (1000 ml)', 0, 'Stück', 1, 0, 20, 4);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2004, 5003, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2005, 1501, 'Wiener Würstchen', 0, 'Stück', 10, 35, 200, 2);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2005, 5003, 2);
+
+--Rezept 2
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2006, 1501, 'Hänchenbrustfilet (500g)', 0, 'Stück', 130, 0, 180, 40);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2006, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2007, 1502, 'Reis (250g)', 0, 'Stück', 15, 1, 875, 185);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2007, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2008, 1500, 'Sojasauce (2 EL)', 0, 'Stück', 2, 0, 20, 4);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2008, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2009, 1502, 'Zucker (1 EL)', 0, 'Stück', 0, 0, 45, 12);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2009, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2010, 1501, 'Knoblauch', 0, 'Stück', 0, 0, 5, 1);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2010, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2011, 1501, 'Gemischte Gemüse (800g)', 0, 'Stück', 8, 1, 240, 48);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2011, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2012, 1502, 'Bambussprossen (200g)', 0, 'Stück', 2, 0, 40, 8);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2012, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2013, 1501, 'Kokosmilch (125ml)', 0, 'Stück', 3, 33, 330, 4);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2013, 5002, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2014, 1500, 'Currypasta, grüne (1 EL)', 0, 'Stück', 0, 1, 20, 2);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2014, 5002, 1);
+
+
+
+--Rezept 3
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2015, 1500, 'Lasagneplatten (300g)', 0, 'Stück', 30, 3, 900, 180);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2016, 1500, 'Spinat (800g)', 0, 'Stück', 20, 20, 160, 20);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2017, 1501, 'Lachs (500g)', 0, 'Stück', 100, 70, 1100, 0);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2018, 1501, 'Käse (150g, gerieben)', 0, 'Stück', 40, 48, 600, 0);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2019, 1502, 'Butter', 0, 'Stück', 0, 49, 360, 0);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2020, 1502, 'Mehl (2 EL)', 0, 'Stück', 2, 0, 60, 12);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2021, 1500, 'Brühe (125ml)', 0, 'Stück', 0, 0, 5, 1);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2022, 1501, 'Sahne (200)', 0, 'Stück', 4, 68, 650, 6);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2023, 1502, 'Parmesan (75g, gerieben)', 0, 'Stück', 24, 20, 300, 0);
 
 
 
 
 
 --BESTELLUNGEN
-    INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
+INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1001, 50);
 
 INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1002, 1002,'2020-07-08');
