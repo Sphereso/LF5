@@ -52,7 +52,7 @@ CREATE TABLE Allergene (
 CREATE TABLE Zutat (
     id SERIAL NOT NULL,
     lieferantId INTEGER NOT NULL,
-    bestand INTEGER NOT NULL,
+    fett DECIMAL (65,30) NOT NULL,
     bezeichnung TEXT NOT NULL,
     preis DECIMAL(65,30) NOT NULL,
     einheit VARCHAR(10) NOT NULL,

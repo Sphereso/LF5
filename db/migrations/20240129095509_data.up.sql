@@ -37,13 +37,42 @@ INSERT INTO Adresse (ID, STRASSE, STADT, PLZ) VALUES (1502, 'Molkereiwegkundekun
 INSERT INTO Lieferant (ID, ADRESSEID, NAME, MAIL) VALUES (1502, 1502, 'Molkerei Henning', 'info@molkerei-henning.de');
 
 --REZEPT
-INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5001, 'lachslasagne', 'Den Spinat 5 min vorgaren, auspressen bis er ganz trocken ist und würzen. Den Lachs etwas auftauen lassen, in kleine Stücke schneiden und mit Zitrone, Salz und Pfeffer würzen. Für die Bechamel-Soße wird die Butter im Topf erhitzt, das Mehl verrührt und mit der Milch aufgegossen. Die Brühe dazugeben und 5 min. kochen lassen. Danach die Sahne dazurühren und nochmals aufkochen lassen. Schließlich den Parmesan hinzufügen und mit Pfeffer und Muskat abschmecken. Jetzt alles abwechselnd in eine feuerfeste Form schichten, zuerst die Soße, dann Lasagneblätter, Soße, Spinat, Lachs, Käse, Lasagneblätter, usw. Letzte Schicht ist Soße. Die Lasagne anschließend bei 200 Grad 45 min. in den Backofen.');
-INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5002, 'Thaicurry mit Hähnchen', 'Die Hühnerbrust in Streifen schneiden und in einer Marinade aus Sojasauce, Pfeffer und Zucker ca. 1 Stunde marinieren. Im Wok oder in der Pfanne gut anbraten. Herausnehmen. Gemischtes Gemüse und Bambussprossen waschen und sehr fein schneiden, ebenfalls anbraten, dann herausnehmen. Die Currypaste und die Kokosmilch im Wok verrühren und kurz (!) durchköcheln lassen. Dann Fleisch und Gemüse wieder zugeben und noch kurz köcheln lassen. Mit Sojasauce abschmecken. In der Zwischenzeit den Reis kochen und abtropfen lassen.');
-INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5003, 'Kartoffelsuppe', 'Kartoffeln und Karotte schälen und in grobe Würfel schneiden. Zwiebel würfeln. Lauch in Ringe schneiden. Zwiebeln in etwas Olivenöl glasig dünsten, Lauch dazugeben. Mit der Gemüsebrühe ablöschen. Die gewürfelten Kartoffeln und Karotte in die Brühe geben. Alles für ca. 20 min köcheln lassen. Anschließend alles mit dem Pürierstab zu einer Suppe pürieren, mit Pfeffer und Muskat abschmecken. Die in Scheiben geschnittenen Würstchen in den Suppenteller geben und die heiße Kartoffelsuppe darüber gießen.');
+INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5001, 'lachslasagne', 'Den Spinat 5 min vorgaren, auspressen bis er ganz trocken ist und würzen.\nDen Lachs etwas auftauen lassen, in kleine Stücke schneiden und mit Zitrone, Salz und Pfeffer würzen.\nFür die Bechamel-Soße wird die Butter im Topf erhitzt, das Mehl verrührt und mit der Milch aufgegossen. Die Brühe dazugeben und 5 min. kochen lassen. Danach die Sahne dazurühren und nochmals aufkochen lassen.\nSchließlich den Parmesan hinzufügen und mit Pfeffer und Muskat abschmecken. Jetzt alles abwechselnd in eine feuerfeste Form schichten, zuerst die Soße, dann Lasagneblätter, Soße, Spinat, Lachs, Käse, Lasagneblätter, usw. Letzte Schicht ist Soße.\nDie Lasagne anschließend bei 200 Grad 45 min. in den Backofen.');
+INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5002, 'Thaicurry mit Hähnchen', 'Die Hühnerbrust in Streifen schneiden und in einer Marinade aus Sojasauce, Pfeffer und Zucker ca. 1 Stunde marinieren.\nIm Wok oder in der Pfanne gut anbraten. Herausnehmen.\nGemischtes Gemüse und Bambussprossen waschen und sehr fein schneiden, ebenfalls anbraten, dann herausnehmen.\nDie Currypaste und die Kokosmilch im Wok verrühren und kurz (!) durchköcheln lassen. Dann Fleisch und Gemüse wieder zugeben und noch kurz köcheln lassen.\nMit Sojasauce abschmecken. In der Zwischenzeit den Reis kochen und abtropfen lassen.');
+INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5003, 'Kartoffelsuppe', 'Kartoffeln und Karotte schälen und in grobe Würfel schneiden.\nZwiebel würfeln. Lauch in Ringe schneiden.\nZwiebeln in etwas Olivenöl glasig dünsten, Lauch dazugeben. Mit der Gemüsebrühe ablöschen.\nDie gewürfelten Kartoffeln und Karotte in die Brühe geben. Alles für ca. 20 min köcheln lassen.\nAnschließend alles mit dem Pürierstab zu einer Suppe pürieren, mit Pfeffer und Muskat abschmecken.\nDie in Scheiben geschnittenen Würstchen in den Suppenteller geben und die heiße Kartoffelsuppe darüber gießen.');
+
+--ZUTAT
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Kartoffel', 0, 'Stück', 4, 0, 180, 40,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Karotte', 0, 'Stück', 0.5, 0, 25, 6,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Lauch', 0, 'Stück', 1.5, 0, 40, 8,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Zwiebel', 0, 'Stück', 1, 0, 40, 10,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Gemüsebrühe (1000 ml)', 0, 'Stück', 1, 0, 20, 4,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Wiener Würstchen', 0, 'Stück', 10, 35, 200, 2,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Hänchenbrustfilet (500g)', 0, 'Stück', 130, 0, 180, 40,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Reis (250g)', 0, 'Stück', 15, 1, 875, 185,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Sojasauce (2 EL)', 0, 'Stück', 2, 0, 20, 4,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Zucker (1 EL)', 0, 'Stück', 0, 0, 45, 12,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Knoblauch', 0, 'Stück', 0, 0, 5, 1,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Gemischte Gemüse (800g)', 0, 'Stück', 8, 1, 240, 48,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Bambussprossen (200g)', 0, 'Stück', 2, 0, 40, 8,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Kokosmilch (125ml)', 0, 'Stück', 3, 33, 330, 4,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Currypasta, grüne (1 EL)', 0, 'Stück', 0, 1, 20, 2,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Lasagneplatten (300g)', 0, 'Stück', 30, 3, 900, 180,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Spinat (800g)', 0, 'Stück', 20, 20, 160, 20,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Lachs (500g)', 0, 'Stück', 100, 70, 1100, 0,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Käse (150g, gerieben)', 0, 'Stück', 40, 48, 600, 0,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Butter', 0, 'Stück', 0, 49, 360, 0,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Mehl (2 EL)', 0, 'Stück', 2, 0, 60, 12,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Brühe (125ml)', 0, 'Stück', 0, 0, 5, 1,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Sahne (200)', 0, 'Stück', 4, 68, 650, 6,)
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (1,2, 'Parmesan (75g, gerieben)', 0, 'Stück', 24, 20, 300, 0,)
+
+
+
 
 
 --BESTELLUNGEN
-INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
+    INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1001, 50);
 
 INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1002, 1002,'2020-07-08');
