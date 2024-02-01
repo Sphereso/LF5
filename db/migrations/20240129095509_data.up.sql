@@ -79,14 +79,23 @@ INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2014, 5002, 1);
 
 --Rezept 3
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2015, 1500, 'Lasagneplatten (300g)', 0, 'Stück', 30, 3, 900, 180);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2015, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2016, 1500, 'Spinat (800g)', 0, 'Stück', 20, 20, 160, 20);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2016, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2017, 1501, 'Lachs (500g)', 0, 'Stück', 100, 70, 1100, 0);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2017, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2018, 1501, 'Käse (150g, gerieben)', 0, 'Stück', 40, 48, 600, 0);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2018, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2019, 1502, 'Butter', 0, 'Stück', 0, 49, 360, 0);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2019, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2020, 1502, 'Mehl (2 EL)', 0, 'Stück', 2, 0, 60, 12);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2020, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2021, 1500, 'Brühe (125ml)', 0, 'Stück', 0, 0, 5, 1);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2021, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2022, 1501, 'Sahne (200)', 0, 'Stück', 4, 68, 650, 6);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2022, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2023, 1502, 'Parmesan (75g, gerieben)', 0, 'Stück', 24, 20, 300, 0);
+INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2023, 5001, 1);
 
 
 
