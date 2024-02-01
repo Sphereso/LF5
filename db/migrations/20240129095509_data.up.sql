@@ -76,7 +76,6 @@ INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, k
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2014, 5002, 1);
 
 
-
 --Rezept 3
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2015, 1500, 'Lasagneplatten (300g)', 0, 'Stück', 30, 3, 900, 180);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2015, 5001, 1);
@@ -96,9 +95,6 @@ INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, k
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2022, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2023, 1502, 'Parmesan (75g, gerieben)', 0, 'Stück', 24, 20, 300, 0);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2023, 5001, 1);
-
-
-
 
 
 --BESTELLUNGEN
@@ -146,3 +142,16 @@ INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5002, 101
 INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1012, 1003,'2020-08-13');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES (5001, 1012, 5);
 
+--Allergene
+INSERT INTO allergene (id, bezeichnung) VALUES (6000, 'Gluten');
+INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6000, 5001);
+INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6000, 5002);
+
+INSERT INTO allergene (id, bezeichnung) VALUES (6001, 'Laktose');
+INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6001, 5001);
+
+INSERT INTO allergene (id, bezeichnung) VALUES (6002, 'Stärke');
+INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6002, 5003);
+
+INSERT INTO allergene (id, bezeichnung) VALUES (6003, 'Karotte');
+INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6003, 5003);
