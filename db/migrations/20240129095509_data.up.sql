@@ -157,9 +157,6 @@ INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES ('66f7fa26-ed51-471
 INSERT INTO allergene (id, bezeichnung) VALUES ('d9ec687f-90b4-4f99-a45c-aa0d8ba755d4', 'Tomate');
 INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES ('d9ec687f-90b4-4f99-a45c-aa0d8ba755d4', '4ea9f377-ac19-4adf-a5c6-3ece79db8c9b');
 
-INSERT INTO allergene (id, bezeichnung) VALUES ('e3b871e3-ca16-4fe4-b71e-33dfca754b38', 'Tomate');
-INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES ('e3b871e3-ca16-4fe4-b71e-33dfca754b38', '4ea9f377-ac19-4adf-a5c6-3ece79db8c9b');
-
 --Ernährungskategorie
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES ('8bf6ce6c-bd47-4549-a45a-fc23e4a50603', 'Vegan');
 INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES ('8bf6ce6c-bd47-4549-a45a-fc23e4a50603', 'cbe4313e-258f-4f96-b323-b8c7a1bf30f0');
