@@ -96,6 +96,9 @@ INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2022, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2023, 1502, 'Parmesan (75g, gerieben)', 0, 'Stück', 24, 20, 300, 0);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2023, 5001, 1);
 
+--Zutaten die in keiner Bestellung sind
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2024, 1502, 'Mika Saft', 5, 'Stück', 1000, 2, 1, 1000);
+INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2025, 1502, 'Conner Schenkel', 10, 'Stück', 10000, 5, 2, 20000);
 
 --BESTELLUNGEN
 INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES (1001, 1001,'2020-07-01');
