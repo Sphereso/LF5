@@ -52,13 +52,13 @@ CREATE TABLE Allergene (
 CREATE TABLE Zutat (
     id SERIAL NOT NULL,
     lieferantId INTEGER NOT NULL,
-    fett DECIMAL (65,30) NOT NULL,
+    fett DECIMAL (10,2) NOT NULL,
     bezeichnung TEXT NOT NULL,
-    preis DECIMAL(65,30) NOT NULL,
+    preis DECIMAL(10,2) NOT NULL,
     einheit VARCHAR(10) NOT NULL,
-    protein DECIMAL(65,30) NOT NULL,
-    kalorien DECIMAL(65,30) NOT NULL,
-    kohlenhydrate DECIMAL(65,30) NOT NULL,
+    protein DECIMAL(10,2) NOT NULL,
+    kalorien DECIMAL(10,2) NOT NULL,
+    kohlenhydrate DECIMAL(10,2) NOT NULL,
 
     CONSTRAINT Zutat_pkey PRIMARY KEY (id)
 );
