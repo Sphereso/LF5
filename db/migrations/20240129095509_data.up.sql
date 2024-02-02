@@ -41,7 +41,7 @@ INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5001, 'lachslasagne', 
 INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5002, 'Thaicurry mit Hähnchen', 'Die Hühnerbrust in Streifen schneiden und in einer Marinade aus Sojasauce, Pfeffer und Zucker ca. 1 Stunde marinieren.\nIm Wok oder in der Pfanne gut anbraten. Herausnehmen.\nGemischtes Gemüse und Bambussprossen waschen und sehr fein schneiden, ebenfalls anbraten, dann herausnehmen.\nDie Currypaste und die Kokosmilch im Wok verrühren und kurz (!) durchköcheln lassen. Dann Fleisch und Gemüse wieder zugeben und noch kurz köcheln lassen.\nMit Sojasauce abschmecken. In der Zwischenzeit den Reis kochen und abtropfen lassen.');
 INSERT INTO Rezept(ID, bezeichnung, beschreibung) VALUES (5003, 'Kartoffelsuppe', 'Kartoffeln und Karotte schälen und in grobe Würfel schneiden.\nZwiebel würfeln. Lauch in Ringe schneiden.\nZwiebeln in etwas Olivenöl glasig dünsten, Lauch dazugeben. Mit der Gemüsebrühe ablöschen.\nDie gewürfelten Kartoffeln und Karotte in die Brühe geben. Alles für ca. 20 min köcheln lassen.\nAnschließend alles mit dem Pürierstab zu einer Suppe pürieren, mit Pfeffer und Muskat abschmecken.\nDie in Scheiben geschnittenen Würstchen in den Suppenteller geben und die heiße Kartoffelsuppe darüber gießen.');
 
---ZUTAT
+--REZEPT 1 - Kartoffelsuppe
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2000, 1500, 'Kartoffel', 0, 'Stück', 4, 0, 180, 40);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2000, 5003, 5);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2001, 1502, 'Karotte', 0, 'Stück', 0.5, 0, 25, 6);
@@ -55,7 +55,7 @@ INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2004, 5003, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2005, 1501, 'Wiener Würstchen', 0, 'Stück', 10, 35, 200, 2);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2005, 5003, 2);
 
---Rezept 2
+--Rezept 2 - Thaicurry mit Hähnchen
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2006, 1501, 'Hänchenbrustfilet (500g)', 0, 'Stück', 130, 0, 180, 40);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2006, 5002, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2007, 1502, 'Reis (250g)', 0, 'Stück', 15, 1, 875, 185);
@@ -76,7 +76,7 @@ INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, k
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2014, 5002, 1);
 
 
---Rezept 3
+--Rezept 3 - Lachslasagne
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2015, 1500, 'Lasagneplatten (300g)', 0, 'Stück', 30, 3, 900, 180);
 INSERT INTO zutatenInRezept(zutatId, rezeptId, menge) VALUES (2015, 5001, 1);
 INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, kalorien, kohlenhydrate) VALUES (2016, 1500, 'Spinat (800g)', 0, 'Stück', 20, 20, 160, 20);
