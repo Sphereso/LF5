@@ -1,6 +1,6 @@
 
 CREATE TABLE Adresse (
-    id SERIAL NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
     strasse TEXT NOT NULL,
     stadt TEXT NOT NULL,
     plz TEXT NOT NULL,
@@ -10,8 +10,8 @@ CREATE TABLE Adresse (
 
 
 CREATE TABLE Kunde (
-    id SERIAL NOT NULL,
-    adresseId INTEGER NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
+    adresseId UUID NOT NULL,
     name TEXT NOT NULL,
     vorname TEXT NOT NULL,
     mail TEXT NOT NULL,
@@ -20,15 +20,15 @@ CREATE TABLE Kunde (
 );
 
 CREATE TABLE Bestellung (
-    id SERIAL NOT NULL,
-    kundeId INTEGER NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
+    kundeId UUID NOT NULL,
     bestellungDatum DATE NOT NULL,
 
     CONSTRAINT Bestellung_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE Rezept (
-    id SERIAL NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
     bezeichnung TEXT NOT NULL,
     beschreibung TEXT NOT NULL,
 
@@ -36,22 +36,22 @@ CREATE TABLE Rezept (
 );
 
 CREATE TABLE Ernaehrungskategorie (
-    id SERIAL NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
     bezeichnung TEXT NOT NULL,
 
     CONSTRAINT Ernaehrungskategorie_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE Allergene (
-    id SERIAL NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
     bezeichnung TEXT NOT NULL,
 
     CONSTRAINT Allergene_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE Zutat (
-    id SERIAL NOT NULL,
-    lieferantId INTEGER NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
+    lieferantId UUID NOT NULL,
     fett DECIMAL (10,2) NOT NULL,
     bezeichnung TEXT NOT NULL,
     preis DECIMAL(10,2) NOT NULL,
@@ -64,24 +64,24 @@ CREATE TABLE Zutat (
 );
 
 CREATE TABLE RezepteInBestellung (
-    rezeptId INTEGER NOT NULL,
-    bestellungId INTEGER NOT NULL,
+    rezeptId UUID NOT NULL,
+    bestellungId UUID NOT NULL,
     menge INTEGER NOT NULL,
 
     CONSTRAINT RezepteInBestellung_pkey PRIMARY KEY (rezeptId,bestellungId)
 );
 
 CREATE TABLE ZutatenInRezept (
-    zutatId INTEGER NOT NULL,
-    rezeptId INTEGER NOT NULL,
+    zutatId UUID NOT NULL,
+    rezeptId UUID NOT NULL,
     menge INTEGER NOT NULL,
 
     CONSTRAINT ZutatenInRezept_pkey PRIMARY KEY (zutatId,rezeptId)
 );
 
 CREATE TABLE Lieferant (
-    id SERIAL NOT NULL,
-    adresseId INTEGER NOT NULL,
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
+    adresseId UUID NOT NULL,
     name TEXT NOT NULL,
     mail TEXT NOT NULL,
 
@@ -89,15 +89,15 @@ CREATE TABLE Lieferant (
 );
 
 CREATE TABLE ErnaehrungskategorieToRezept (
-    ernaehrungskategorieId INTEGER NOT NULL,
-    rezeptId INTEGER NOT NULL,
+    ernaehrungskategorieId UUID NOT NULL,
+    rezeptId UUID NOT NULL,
 
     CONSTRAINT ErnaehrungskategorieToRezept_pkey PRIMARY KEY (ernaehrungskategorieId,rezeptId)
 );
 
 CREATE TABLE AllergeneToRezept (
-    allergeneId INTEGER NOT NULL,
-    rezeptId INTEGER NOT NULL,
+    allergeneId UUID NOT NULL,
+    rezeptId UUID NOT NULL,
 
     CONSTRAINT AllergeneToRezept_pkey PRIMARY KEY (allergeneId,rezeptId)
 
