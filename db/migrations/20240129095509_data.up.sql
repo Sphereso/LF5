@@ -162,29 +162,28 @@ INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6004, 5003);
 INSERT INTO allergene (id, bezeichnung) VALUES (6005, 'Tomate');
 INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6005, 5003);
 
-INSERT INTO allergene (id, bezeichnung) VALUES (6005, 'Tomate');
+INSERT INTO allergene (id, bezeichnung) VALUES (6006, 'Tomate');
 INSERT INTO allergeneToRezept (allergeneId, rezeptId) VALUES (6006, 5003);
 
 --Ernährungskategorie
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4000, 'Vegan');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4000, 8001);
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4000, 8002);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4000, 5001);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4000, 5002);
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4001, 'Vegetarisch');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4001, 8001);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4001, 5001);
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4002, 'Frutarisch');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4002, 8003);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4002, 5003);
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4003, 'Low Carb');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4003, 8003);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4003, 5003);
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4004, 'High Protein');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4004, 8003);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4004, 5003);
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4005, 'Flexitarier');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4005, 8003);
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4005, 5003);
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES (4006, 'Carnivore');
-INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4006, 8003);
-
+INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES (4006, 5003);
