@@ -179,3 +179,21 @@ INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALU
 
 INSERT INTO ernaehrungskategorie (id, bezeichnung) VALUES ('6578fb9a-f5e6-4112-908e-2beb08326f0a', 'Carnivore');
 INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALUES ('6578fb9a-f5e6-4112-908e-2beb08326f0a', '4ea9f377-ac19-4adf-a5c6-3ece79db8c9b');
+
+
+--Stored procedures
+--Procedure to get all lieferanten in a city
+
+CREATE OR REPLACE PROCEDURE get_lieferant()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    rec RECORD;
+BEGIN
+    FOR rec IN SELECT lieferant.name, lieferant.mail, adresse.strasse, adresse.stadt, adresse.plz 
+               FROM lieferant JOIN adresse ON lieferant.adresseid = adresse.id WHERE adresse.stadt = 'Jork' LOOP
+        RAISE NOTICE 'Name: %, Mail: %, Street: %, City: %, Zip: %', rec.name, rec.mail, rec.strasse, rec.stadt, rec.plz;
+    END LOOP;
+END
+$$;
+
