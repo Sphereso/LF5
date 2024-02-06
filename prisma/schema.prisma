@@ -1,0 +1,124 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model schema_migrations {
+  version BigInt  @id
+  dirty   Boolean
+}
+
+model adresse {
+  id        String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  strasse   String
+  stadt     String
+  plz       String
+  kunde     kunde?
+  lieferant lieferant?
+}
+
+model allergene {
+  id                String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  bezeichnung       String
+  allergenetorezept allergenetorezept[]
+}
+
+model allergenetorezept {
+  allergeneid String    @db.Uuid
+  rezeptid    String    @db.Uuid
+  allergene   allergene @relation(fields: [allergeneid], references: [id], onDelete: Cascade, map: "_allergenetorezept_a_fkey")
+  rezept      rezept    @relation(fields: [rezeptid], references: [id], onDelete: Cascade, map: "_allergenetorezept_b_fkey")
+
+  @@id([allergeneid, rezeptid])
+}
+
+model bestellung {
+  id                  String                @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  kundeid             String                @db.Uuid
+  bestellungdatum     DateTime              @db.Date
+  kunde               kunde                 @relation(fields: [kundeid], references: [id])
+  rezepteinbestellung rezepteinbestellung[]
+}
+
+model ernaehrungskategorie {
+  id                           String                         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  bezeichnung                  String
+  ernaehrungskategorietorezept ernaehrungskategorietorezept[]
+}
+
+model ernaehrungskategorietorezept {
+  ernaehrungskategorieid String               @db.Uuid
+  rezeptid               String               @db.Uuid
+  ernaehrungskategorie   ernaehrungskategorie @relation(fields: [ernaehrungskategorieid], references: [id], onDelete: Cascade, map: "_ernaehrungskategorietorezept_a_fkey")
+  rezept                 rezept               @relation(fields: [rezeptid], references: [id], onDelete: Cascade, map: "_ernaehrungskategorietorezept_b_fkey")
+
+  @@id([ernaehrungskategorieid, rezeptid])
+}
+
+model kunde {
+  id         String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  adresseid  String       @unique @db.Uuid
+  name       String
+  vorname    String
+  mail       String
+  bestellung bestellung[]
+  adresse    adresse      @relation(fields: [adresseid], references: [id])
+}
+
+model lieferant {
+  id        String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  adresseid String  @unique @db.Uuid
+  name      String
+  mail      String
+  adresse   adresse @relation(fields: [adresseid], references: [id])
+  zutat     zutat[]
+}
+
+model rezept {
+  id                           String                         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  bezeichnung                  String
+  beschreibung                 String
+  allergenetorezept            allergenetorezept[]
+  ernaehrungskategorietorezept ernaehrungskategorietorezept[]
+  rezepteinbestellung          rezepteinbestellung[]
+  zutateninrezept              zutateninrezept[]
+}
+
+model rezepteinbestellung {
+  rezeptid     String     @db.Uuid
+  bestellungid String     @db.Uuid
+  menge        Int
+  bestellung   bestellung @relation(fields: [bestellungid], references: [id])
+  rezept       rezept     @relation(fields: [rezeptid], references: [id])
+
+  @@id([rezeptid, bestellungid])
+}
+
+model zutat {
+  id              String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lieferantid     String            @db.Uuid
+  fett            Decimal           @db.Decimal(10, 2)
+  bezeichnung     String
+  preis           Decimal           @db.Decimal(10, 2)
+  einheit         String            @db.VarChar(10)
+  protein         Decimal           @db.Decimal(10, 2)
+  kalorien        Decimal           @db.Decimal(10, 2)
+  kohlenhydrate   Decimal           @db.Decimal(10, 2)
+  lieferant       lieferant         @relation(fields: [lieferantid], references: [id])
+  zutateninrezept zutateninrezept[]
+}
+
+model zutateninrezept {
+  zutatid  String @db.Uuid
+  rezeptid String @db.Uuid
+  menge    Int
+  rezept   rezept @relation(fields: [rezeptid], references: [id])
+  zutat    zutat  @relation(fields: [zutatid], references: [id])
+
+  @@id([zutatid, rezeptid])
+}
