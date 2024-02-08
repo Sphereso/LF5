@@ -184,7 +184,7 @@ INSERT INTO ernaehrungskategorieToRezept (ernaehrungskategorieId, rezeptId) VALU
 --Stored procedures
 --Procedure to get all lieferanten in a city
 
-CREATE OR REPLACE PROCEDURE get_lieferant(p_stadt VARCHAR)
+CREATE PROCEDURE get_lieferant(p_stadt VARCHAR)
 LANGUAGE plpgsql
 AS $$
 DECLARE
