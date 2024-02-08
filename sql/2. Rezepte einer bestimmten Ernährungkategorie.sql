@@ -1,4 +1,4 @@
---2. **Auswahl aller Rezepte einer bestimmten Ernährungskategorie:**
+--2. Auswahl aller Rezepte einer bestimmten Ernährungskategorie
 
 SELECT rezept.bezeichnung, ernaehrungskategorie.bezeichnung FROM rezept
 LEFT JOIN ernaehrungskategorietorezept

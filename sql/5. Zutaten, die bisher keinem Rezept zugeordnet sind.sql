@@ -1,4 +1,4 @@
---5. **Auswahl aller Zutaten, die bisher keinem Rezept zugeordnet sind:**
+--5. Auswahl aller Zutaten, die bisher keinem Rezept zugeordnet sind
 
 SELECT zutat.bezeichnung FROM rezept
 FULL JOIN zutateninrezept

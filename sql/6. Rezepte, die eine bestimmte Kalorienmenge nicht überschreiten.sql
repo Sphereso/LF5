@@ -1,4 +1,4 @@
---6. **Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten:**
+--6. Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten
 
 SELECT DISTINCT rezept.id, rezept.bezeichnung FROM rezept
 LEFT JOIN zutateninrezept

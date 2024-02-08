@@ -1,4 +1,4 @@
---1. **Auswahl aller Zutaten eines Rezeptes nach Rezeptname:**
+--1. Auswahl aller Zutaten eines Rezeptes nach Rezeptname
 
 SELECT rezept.bezeichnung, zutat.bezeichnung FROM rezept
 LEFT JOIN zutateninrezept

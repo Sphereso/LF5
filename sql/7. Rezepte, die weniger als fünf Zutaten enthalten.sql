@@ -1,4 +1,4 @@
---7. **Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten:**
+--7. Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten
 
 SELECT rezept.bezeichnung, count(zutat.bezeichnung) FROM rezept
 LEFT JOIN zutateninrezept
