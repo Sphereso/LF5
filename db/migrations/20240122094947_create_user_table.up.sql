@@ -103,12 +103,12 @@ CREATE TABLE AllergeneToRezept (
 
 );
 
-CREATE TABLE BestellungToZutat (
+CREATE TABLE ZutatInBestellung (
     bestellungId UUID NOT NULL,
     zutatId UUID NOT NULL,
     menge INTEGER NOT NULL,
 
-    CONSTRAINT BestellungToZutat_pkey PRIMARY KEY (bestellungId, zutatId)
+    CONSTRAINT ZutatInBestellung_pkey PRIMARY KEY (bestellungId, zutatId)
 );
 
 CREATE UNIQUE INDEX Kunde_adresseId_key ON Kunde(adresseId);
@@ -139,6 +139,6 @@ ALTER TABLE AllergeneToRezept ADD CONSTRAINT _AllergeneToRezept_A_fkey FOREIGN K
 
 ALTER TABLE AllergeneToRezept ADD CONSTRAINT _AllergeneToRezept_B_fkey FOREIGN KEY (rezeptId) REFERENCES Rezept(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE BestellungToZutat ADD CONSTRAINT BestellungToZutat_zutatId_fkey FOREIGN KEY (zutatId) REFERENCES Zutat(id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE ZutatInBestellung ADD CONSTRAINT ZutatInBestellung_zutatId_fkey FOREIGN KEY (zutatId) REFERENCES Zutat(id) ON DELETE RESTRICT ON UPDATE CASCADE;
 
-ALTER TABLE BestellungToZutat ADD CONSTRAINT BestellungToZutat_bestellungId_fkey FOREIGN KEY (bestellungId) REFERENCES Bestellung(id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE ZutatInBestellung ADD CONSTRAINT ZutatInBestellung_bestellungId_fkey FOREIGN KEY (bestellungId) REFERENCES Bestellung(id) ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -105,6 +105,7 @@ INSERT INTO Zutat(ID, lieferantID, bezeichnung, preis, einheit, protein, fett, k
 --BESTELLUNGEN
 INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES ('7ecb68d0-5e42-4e82-8421-7ef4b723365d', '7f217632-6c13-4bc0-b111-d62b1ff70e01','2020-07-08');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES ('cbe4313e-258f-4f96-b323-b8c7a1bf30f0', '7ecb68d0-5e42-4e82-8421-7ef4b723365d', 1);
+INSERT INTO ZutatInBestellung(zutatId, bestellungId, menge) VALUES ('b2204459-bdd8-46b0-9342-577c02f09c0c', '7ecb68d0-5e42-4e82-8421-7ef4b723365d', 12);
 
 INSERT INTO Bestellung (ID, kundeId, bestellungDatum) VALUES ('89f14737-fa94-41ea-8916-f38f75e72d50', 'd7f2f06c-735e-4d62-81b1-38972f9c9322','2020-08-01');
 INSERT INTO RezepteInBestellung(rezeptId, bestellungId, menge) VALUES ('4ea9f377-ac19-4adf-a5c6-3ece79db8c9b', '89f14737-fa94-41ea-8916-f38f75e72d50', 3);
