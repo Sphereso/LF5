@@ -1,4 +1,3 @@
-
 --KUNDEN DATEN
 INSERT INTO Adresse (id, strasse, stadt, plz) VALUES ('488252e9-b886-434c-b587-8a0a3fbdbd92', 'Eppendorfer Landstrasse 104', 'Hamburg', '20249');
 INSERT INTO Kunde (id, adresseId, name, vorname, mail) VALUES ('e163a19b-30ad-4654-81b1-7111e6ed0c44', '488252e9-b886-434c-b587-8a0a3fbdbd92', 'Wellensteyn', 'Kira', 'k.wellensteyn@yahoo.de');
